@@ -1,100 +1,95 @@
-# Stack Underflow | SOF Clone | MERN-GraphQL
+# 🧠 DeBugIt – Q&A Platform (Stack Overflow Clone)
 
-Fullstack [Stack Overflow](https://stackoverflow.com/) clone (QnA site) made with MERN + GraphQL
+A full-stack Q&A web application where users can ask questions, post answers, and interact with the developer community – inspired by Stack Overflow.
 
-## Demo
+## 🚀 Live Demo  
+[📂 GitHub Repository](https://github.com/rash-22/stack-underflow)
 
-[Deployed on Netlify (front-end) & Heroku (back-end)](https://stackunderflow.netlify.app)
+## 🛠️ Tech Stack
 
-## Built using
+- **Frontend:** React.js, Redux, CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB (with Mongoose)  
+- **Authentication:** JSON Web Tokens (JWT)  
+- **API Style:** GraphQL  
+- **Tools:** Git, GitHub, VS Code, Postman
 
-#### Front-end
+## ✨ Features
 
-- [ReactJS](https://reactjs.org/) - Frontend framework
-- [Apollo Client](https://www.apollographql.com/docs/react/) - State management library to manage both local and remote data with GraphQL
-- [Context API w/ hooks](https://reactjs.org/docs/context.html) - For state of user, toast notifs, theme etc.
-- [React Router](https://reactrouter.com/) - For general routing & navigation
-- [React Hook Form](https://react-hook-form.com/) - For flexible forms
-- [Material-UI w/ lots of CSS customisations](https://material-ui.com/) - UI library
-- [Yup](https://github.com/jquense/yup) - For form validation
-- [date-fns](https://date-fns.org/) - For manipulating & formatting of dates
+✅ User registration & login with JWT authentication  
+✅ Post questions and answers (CRUD operations)  
+✅ Upvote/downvote system for answers  
+✅ Real-time updates using GraphQL subscriptions *(if applicable)*  
+✅ Responsive UI using React & Redux  
+✅ MongoDB integration for fast and scalable data storage  
+✅ Clean and simple user interface inspired by Stack Overflow
 
-#### Back-end
 
-- [Node.js](https://nodejs.org/en/) - Runtime environment for JS
-- [Apollo Server](https://www.apollographql.com/docs/apollo-server/) - To build a self-documenting GraphQL API server
-- [MongoDB](https://www.mongodb.com/) - Database to store document-based data
-- [Mongoose](https://mongoosejs.com/) - MongoDB object modeling for Node.js
-- [JSON Web Token](https://jwt.io/) - A standard to secure/authenticate HTTP requests
-- [Bcrypt.js](https://www.npmjs.com/package/bcryptjs) - For hashing passwords
-- [Mongoose Unique Validator](https://www.npmjs.com/package/mongoose-unique-validator) - Plugin for better error handling of unique fields within Mongoose schema
-- [Dotenv](https://www.npmjs.com/package/dotenv) - To load environment variables from a .env file
+## 📸 Screenshots
 
-## Features
+![image](https://github.com/user-attachments/assets/2aada28d-bad9-4012-8841-e39075250974)
+![image](https://github.com/user-attachments/assets/5f8f4ba6-239d-4c4e-919b-c58f339cda77)
+![image](https://github.com/user-attachments/assets/aa9c604d-84d4-4b98-a2ff-b2b3b7146540)
+![image](https://github.com/user-attachments/assets/8c30bdbe-52e1-494f-9966-f9278eb8d2f3)
+![image](https://github.com/user-attachments/assets/87e3cf90-dd29-42ce-a8d1-e25e1b211b50)
+![image](https://github.com/user-attachments/assets/d38da47b-5c50-49eb-a9f4-e86eddabc47d)
+![image](https://github.com/user-attachments/assets/dca1e2e5-4241-48a4-b995-d489d9b3c240)
+![image](https://github.com/user-attachments/assets/6b8eb4c3-fdac-4183-982e-d7952a8b24aa)
+![image](https://github.com/user-attachments/assets/71e91e93-6097-4ac1-9999-15cc5062575b)
 
-- Authentication (login/register with username-password)
-- CRUD questions, answers & comments
-- Upvote/downvote questions & answers
-- Tags for organising questions
-- Page views - A view is registered whenever the question page is opened
-- Pages for added tags, registered users & more
-- Sorting of questions on basis of hot, votes, views, newest & oldest
-- Search questions over the server on basis of question title & body
-- Pagination of posts in the form of "Load More" button
-- Error management to prevent app crashes
-- Toast notifications for actions: adding questions, deleting comments etc.
-- Loading spinners for relevant fetching processes
-- Formatted dates for adding/updating questions/answers/comments
-- Dark mode toggle w/ local storage save
-- Proper responsive UI for all screens
 
-## Screenshots
 
-#### Desktop/Tablet
+## 🔧 How to Run Locally
 
-![Desktop-1](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/desktop-1.jpg)
-![Desktop-2](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/desktop-2.jpg)
-![Desktop-3](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/desktop-3.jpg)
-![Desktop-4](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/desktop-4.jpg)
-![Desktop-5](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/desktop-5.jpg)
+```bash
+# Clone the repository
+git clone https://github.com/rash-22/stack-underflow.git
+cd stack-underflow
 
-#### Mobile
+# Install backend dependencies
+cd server
+npm install
+npm start
 
-![Mobile-1](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/mobile-1.jpg)
-![Mobile-2](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/mobile-2.jpg)
-![Mobile-3](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/mobile-3.jpg)
-![Mobile-4](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/mobile-4.jpg)
-![Mobile-5](https://github.com/amand33p/stack-underflow-mern-gql/blob/master/screenshots/mobile-5.jpg)
-
-## Usage
-
-#### Env variable:
-
-Create a .env file in server directory and add the following:
-
-```
-MONGODB_URI = "Your Mongo URI"
-PORT = 4000
-SECRET = "Your JWT secret"
-
-```
-
-#### Client:
-
-Open client/src/backendUrl.js & change "backend" variable to `"http://localhost:4000"`
-
-```
-cd client
+# Open a new terminal for frontend
+cd ../client
 npm install
 npm start
 ```
 
-#### Server:
+The app will be running at: http://localhost:3000
 
-Note: Make sure that you have installed 'nodemon' as global package.
+## 🔐 Environment Variables
 
+Create a `.env` file in the `/server` directory and add the following:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
 ```
-cd server
-npm install
-npm run dev
-```
+
+## 📌 Future Improvements
+
+- Add notifications for answers and upvotes  
+- Implement search and filter functionality  
+- Add tags and related question suggestions  
+- Improve user profile section (reputation, stats, etc.)  
+- Deploy using Render / Vercel for public access
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to fork the project, raise issues, or submit pull requests to enhance the platform.
+
+## 📬 Contact
+
+**Rashmi Sahani**  
+📧 rashmisahani08@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/rashmi-sahani) | [GitHub](https://github.com/rash-22)
+
+## ⭐ Show Some Love!
+
+If you found this project helpful or inspiring, don’t forget to ⭐ the repository and share it with others!
+
+
