@@ -26,7 +26,7 @@ A full-stack Q&A web application where users can ask questions, post answers, an
 
 
 ## 📸 Screenshots
-
+![image](https://github.com/user-attachments/assets/4558b996-c251-4ba0-95db-3449b18c8c6b)
 ![image](https://github.com/user-attachments/assets/2aada28d-bad9-4012-8841-e39075250974)
 ![image](https://github.com/user-attachments/assets/5f8f4ba6-239d-4c4e-919b-c58f339cda77)
 ![image](https://github.com/user-attachments/assets/aa9c604d-84d4-4b98-a2ff-b2b3b7146540)
